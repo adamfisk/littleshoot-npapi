@@ -1,0 +1,1 @@
+The Mac version in particular is now relying on an externally-built boost version -- see the XCode project.

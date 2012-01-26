@@ -262,6 +262,7 @@ NPError NPP_NewStream(
     NPBool seekable, uint16 * stype
     )
 {
+	log_info("Creating new stream");
     if (0 == instance)
     {
         return NPERR_INVALID_INSTANCE_ERROR;
@@ -282,17 +283,13 @@ NPError NPP_NewStream(
 		log_debug(plugin->m_url);
 	}
 #endif
-
-    if (stream->url && stream->headers)
+    if (stream->url)
     {
-#if 0
-        log_debug("New Stream url(" << stream->url << "), end(" << stream->end << "), lastmodified(" << stream->lastmodified << "), headers(" << stream->headers << ").");
-#endif
-
+		log_info("New Stream url(" << stream->url << "), end(" << stream->end << "), lastmodified(" << stream->lastmodified << ").");
+		
         littleshoot::stream_entry e(
-            stream->url, stream->end, stream->lastmodified, stream->headers
+            stream->url, stream->end, stream->lastmodified, 0
         );
-        
         boost::shared_ptr<littleshoot::stream> s(new littleshoot::stream(e));
         
         plugin->insert_stream(s);
