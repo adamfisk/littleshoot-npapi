@@ -48,18 +48,17 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>c:\boost;../../;../../control;../../nsprpub/pr/include;../../nsprpub/pr/include/obsolete;../../nsprpub/pr/src/md/mac;../../plugin\base\public;../../sun-java/stubs/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>c:\boost\boost_1_44;../../;../../control;../../nsprpub/pr/include;../../nsprpub/pr/include/obsolete;../../nsprpub/pr/src/md/mac;../../plugin\base\public;../../sun-java/stubs/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LITTLESHOOT_EXPORTS;XP_WIN;XP_WIN32;MOZILLA_STRICT_API;XPCOM_GLUE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libboost_system-mt-sgd.lib;libboost_thread-mt-sgd.lib;libboost_filesystem-mt-sgd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libboost_system-vc100-mt-s-1_44.lib;libboost_thread-vc100-mt-s-1_44.lib;libboost_filesystem-vc100-mt-s-1_44.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\thread;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\thread\build\msvc-10.0\debug\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\system\build\msvc-10.0\debug\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\date_time\build\msvc-10.0\debug\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\filesystem\build\msvc-10.0\debug\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>littleshoot.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -71,8 +70,8 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>c:\boost;../../;../../control;../../nsprpub/pr/include;../../nsprpub/pr/include/obsolete;../../nsprpub/pr/src/md/mac;../../plugin\base\public;../../sun-java/stubs/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LITTLESHOOT_EXPORTS;XP_WIN;XP_WIN32;MOZILLA_STRICT_API;XPCOM_GLUE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\boost\boost_1_44;../../;../../control;../../nsprpub/pr/include;../../nsprpub/pr/include/obsolete;../../nsprpub/pr/src/md/mac;../../plugin\base\public;../../sun-java/stubs/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LITTLESHOOT_EXPORTS;XP_WIN;XP_WIN32;MOZILLA_STRICT_API;XPCOM_GLUE;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;BOOST_ALL_NO_LIB;BOOST_NO_RVALUE_REFERENCES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
@@ -81,8 +80,8 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libboost_system-mt-s.lib;libboost_thread-mt-s.lib;libboost_filesystem-mt-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\thread\build\msvc-10.0\release\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\system\build\msvc-10.0\release\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\date_time\build\msvc-10.0\release\link-static\runtime-link-static\threading-multi;..\..\..\..\..\..\..\..\..\boost\bin.v2\libs\filesystem\build\msvc-10.0\release\link-static\runtime-link-static\threading-multi;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_system-vc100-mt-s-1_44.lib;libboost_thread-vc100-mt-s-1_44.lib;libboost_filesystem-vc100-mt-s-1_44.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\boost\boost_1_44\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>littleshoot.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
