@@ -3,3 +3,5 @@ Added BOOST_NO_RVALUE_REFERENCES to preprocessor definitions in Visual Studio 10
 Also started using precompiled binaries, available at 
 
 http://www.boostpro.com/download/
+
+You also have to run ./depends.sh for all the necessary headers for building the VS project.
