@@ -1,3 +1,5 @@
+FIRST, AS OF THIS WRITING THE BUILD ONLY WORKS IN RELEASE MODE. This is because of the release runtime version of boost it's linked against - the prebuilt boost libs.
+
 Added BOOST_NO_RVALUE_REFERENCES to preprocessor definitions in Visual Studio 10. See http://lists.boost.org/boost-users/2010/09/62542.php
 
 Also started using precompiled binaries, available at 
