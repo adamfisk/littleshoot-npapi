@@ -1,0 +1,5 @@
+Added BOOST_NO_RVALUE_REFERENCES to preprocessor definitions in Visual Studio 10. See http://lists.boost.org/boost-users/2010/09/62542.php
+
+Also started using precompiled binaries, available at 
+
+http://www.boostpro.com/download/
